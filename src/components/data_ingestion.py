@@ -33,7 +33,7 @@ class DataIngestion:
             so need of keeping both the columns so i am removing this column
             4. There are some NAN values Present in Our DataSet so i am dropping those NAN values 
             (since there are only 300 NAN values and our dataset contains >1,00,000 rows)
-            
+
               '''
 
             df.dropna(inplace = True)
@@ -66,4 +66,4 @@ if __name__=="__main__":
 
     obj2 = DataTransformation()
     train_arr , test_arr , _,_= obj2.initiate_data_transformation(train_data,test_data)
-    print(train_arr.shape , test_arr.shape)
+    print(train_arr[0] , test_arr.shape)
